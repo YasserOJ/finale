@@ -1,5 +1,88 @@
-<app-header></app-header>
+<div class="page-loading">
+  <img src="../../../assets/loader2.gif" alt="" />
+</div>
+
+<div class="theme-layout" id="scrollup">
+
+  <div class="responsive-header five">
+    <div class="responsive-menubar">
+      <div class="res-logo"><a routerLink="/home/main" title=""><img src="../../../assets/logomob.png" alt="" /></a></div>
+      <div class="menu-resaction">
+        <div class="res-openmenu">
+          <img src="../../../assets/icon5.png" alt="" /> Menu
+        </div>
+        <div class="res-closemenu">
+          <img src="../../../assets/icon6.png" alt="" /> Close
+        </div>
+      </div>
+    </div>
+    <div class="responsive-opensec">
+      <div class="btn-extars">
+        <ul class="account-btns">
+          <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+          <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+        </ul>
+      </div><!-- Btn Extras -->
+      <div class="responsivemenu">
+        <ul>
+          <li class="">
+            <a routerLink="/home" title="">Home</a>
+          </li>
+          <li class="">
+            <a routerLink="/about_us" title="">About US</a>
+          </li>
+          <li class="">
+            <a routerLink="/partners" title="">Partners</a>
+          </li>
+          <li class="">
+            <a routerLink="/how_it_works" title="">How it Works</a>
+          </li>
+          <li class="">
+            <a routerLink="/contact_us" title="">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <header class="style5">
+    <div class="menu-sec">
+      <div class="container fluid">
+        <nav>
+          <ul>
+            <li class="">
+              <a routerLink="/home/main" routerLinkActive="Active" title="">Home</a>
+            </li>
+            <li class="">
+              <a routerLink="/home/about_us" title="">About US</a>
+            </li>
+            <li class="">
+              <a routerLink="/home/partners" title="">Partners</a>
+            </li>
+            <li class="">
+              <a routerLink="/home/how_it_works" title="">How it Works</a>
+            </li>
+            <li class="">
+              <a routerLink="/home/contact_us" title="">Contact Us</a>
+            </li>
+          </ul>
+        </nav><!-- Menus -->
+        <div class="logo">
+          <a routerLink="/home/main" title=""><img src="../../../assets/logo.png" alt="" /></a>
+        </div><!-- Logo -->
+        <div class="btn-extars">
+          <ul class="account-btns">
+            <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+            <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+          </ul>
+        </div><!-- Btn Extras -->
+      </div>
+    </div>
+  </header>
+
+
 <router-outlet></router-outlet>
+</div>
 <app-footer></app-footer>
 <app-login></app-login>
 <app-regester></app-regester>

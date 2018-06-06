@@ -757,6 +757,18 @@ label::after {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
+.newnav nav > ul > li > a{
+  color: #FFFFFF;
+}
+.newnav nav > ul > li > a:hover{
+  color: #79bf42;
+  background: #0878ba;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
 .menu-sec nav > ul > li:hover > ul {
     opacity: 1;
     visibility: visible;
