@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {FlashMessageModule} from 'angular-flash-message/dist';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,6 +27,9 @@ import { OfferSingleComponent } from './client/offer-single/offer-single.compone
 import { CandidatSingleComponent } from './client/candidat-single/candidat-single.component';
 import { HeaderCComponent } from './client/header-c/header-c.component';
 
+import {ValidationServService} from './Services/validation-serv.service';
+import {AuthService} from './Services/auth.service';
+
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent, children: [
       {path: 'main', component: BodyComponent},
@@ -40,7 +45,7 @@ const appRoutes: Routes = [
       {path: 'savedcv', component: SavedCvComponent},
       {path: 'notification', component: NotificationComponent},
       {path: 'profile', component: ProfileComponent},
-      {path: 'change_pass', component: ChangePasswordComponent},
+      {path: 'changepassword', component: ChangePasswordComponent},
       {path: '', redirectTo: '/client/myoffers', pathMatch : 'full'}
     ]},
   {path: '', redirectTo: '/home/main', pathMatch : 'full'},
@@ -74,9 +79,12 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    HttpClientModule,
+    FlashMessageModule
   ],
-  providers: [],
+  providers: [ValidationServService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

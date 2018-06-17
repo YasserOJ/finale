@@ -609,7 +609,7 @@ label::after {
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url('../images/lines.png');
+    background-image: url('../../assets/lines.png');
     z-index: 3;
     opacity: 0.1;
 }
@@ -2415,13 +2415,13 @@ header.style2 nav {
     top: 60px;
     width: 270px;
     height: 36px;
-    background-image: url('../images/line1.png');
+    background-image: url('../../assets/line1.png');
     content: "";
     z-index: 1;
     margin-left: 61px;
 }
 .how-to:nth-child(n+2)::before {
-    background-image: url('../images/line2.png');
+    background-image: url('../../assets/line2.png');
     top: 13px;
 }
 .how-to:last-child::before {
@@ -3104,10 +3104,10 @@ header.style3 .menu-sec nav {
     margin-top: -1px;
 }
 .how-to-sec.style2 .how-to::before {
-    background-image: url('../images/line3.png');
+    background-image: url('../../assets/line3.png');
 }
 .how-to-sec.style2 .how-to:nth-child(n+2)::before {
-    background-image: url(../images/line4.png);
+    background-image: url(../../assets/line4.png);
 }
 .how-to-sec.style2 .how-icon {
     background: #7dc246;
@@ -4404,7 +4404,7 @@ footer.style3 span, footer.style3 a {
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url('../images/lines.png');
+    background-image: url('../../assets/lines.png');
     z-index: 0;
     opacity: 0.14;
 }
@@ -11441,6 +11441,7 @@ footer.ft .scrollup {
     height: 1px;
     background: #ffffff;
     content: "";
+  color: #000000;
 }
 .responsivemenu > ul > li.menu-item-has-children > a::after {
     position: absolute;
@@ -11450,6 +11451,7 @@ footer.ft .scrollup {
     height: 20px;
     content: "";
     background: #ffffff;
+  color: #000000;
 }
 .responsivemenu > ul > li ul {
     float: left;
@@ -11468,7 +11470,7 @@ footer.ft .scrollup {
 .responsivemenu > ul > li ul > li a {
     float: left;
     width: 100%;
-    color: #ffffff;
+    color: #000000;
     font-size: 13px;
     padding: 8px 0;
 }
@@ -11485,7 +11487,7 @@ footer.ft .scrollup {
     color: #ffffff;
 }
 .responsivemenu > ul > li ul > li a:hover {
-    color: #fb236a;
+    color: #0878ba;
     padding-left: 15px;
 }
 .res-openmenu.active {
