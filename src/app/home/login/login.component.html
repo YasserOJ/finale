@@ -7,13 +7,13 @@
       <span>Candidate</span>
       <span>Employer</span>
     </div>
-    <form>
+    <form (submit)="onLogin()">
       <div class="cfield">
-        <input type="text" placeholder="Username or email" />
+        <input type="text" placeholder="Username or email" [(ngModel)]="usermail" name="usermail" />
         <i class="la la-user"></i>
       </div>
       <div class="cfield">
-        <input type="password" placeholder="********" />
+        <input type="password" placeholder="********" [(ngModel)]="logpass" name="logpass" />
         <i class="la la-key"></i>
       </div>
       <p class="remember-label">

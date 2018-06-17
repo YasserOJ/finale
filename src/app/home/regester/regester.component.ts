@@ -10,11 +10,11 @@ import {Router} from '@angular/router';
   styleUrls: ['./regester.component.css']
 })
 export class RegesterComponent implements OnInit {
-  cname: string;
-  username: string;
+  name: string;
+  userName: string;
   email: string;
   password: string;
-  c_number: string;
+  contractNumber: string;
   adress: string;
   phone: string;
   constructor( private validation: ValidationServService,
@@ -22,18 +22,18 @@ export class RegesterComponent implements OnInit {
                private  auth: AuthService,
                private route: Router) { }
 Register() {
-
   const client =  {
-      cname: this.cname ,
-      username: this.username,
+      name: this.name ,
+      username: this.userName,
       email: this.email,
       password: this.password,
-      c_number: this.c_number,
+      contractNnumber: this.contractNumber,
       adress: this.adress,
       phone: this.phone
     };
+  console.log(client);
   if (!this.validation.validate_register(client)) {
-    this.flash.danger('Please fill the survey', {generalClass: 'success-class', timeout : 5000});
+    this.flash.danger('Please fill the survey', {timeout : 5000});
     return false;
   }
   if (!this.validation.validateEmail(client.email)) {
@@ -41,6 +41,7 @@ Register() {
     return false;
   }
   this.auth.registerclient(client).subscribe(data => {
+    console.log(client);
     if (data.success) {
       this.flash.success('You are now registred and can log in', {timeout : 5000});
       this.route.navigate(['home/main']);
@@ -49,7 +50,7 @@ Register() {
       this.route.navigate(['home/main']);
     }
   });
-}
+};
   ngOnInit() {
   }
 
