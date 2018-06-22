@@ -26,7 +26,7 @@ logpass:  string;
         this.flash.danger(data.msg, {timeout : 5000});
       } else {
         this.flash.success (data.msg, {timeout : 5000});
-        localStorage.setItem('user', JSON.stringify(data.client));
+        localStorage.setItem('client', JSON.stringify(data.client));
         this.route.navigate(['/client/myoffers']);
       }
     });

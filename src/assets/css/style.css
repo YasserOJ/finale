@@ -947,6 +947,12 @@ label::after {
     color: #474747;
     padding: 16px 45px 16px 15px;
 }
+.account-popup > form .popoutmsg {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: 19px;
+}
 .account-popup > form .cfield i {
     position: absolute;
     right: 0;

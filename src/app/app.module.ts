@@ -30,6 +30,7 @@ import { HeaderCComponent } from './client/header-c/header-c.component';
 import {ValidationServService} from './Services/validation-serv.service';
 import {AuthService} from './Services/auth.service';
 import {MygaurdGuard} from './guards/mygaurd.guard';
+import { PostOfferComponent } from './client/post-offer/post-offer.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent, children: [
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
       {path: 'notification', component: NotificationComponent},
       {path: 'profile', component: ProfileComponent},
       {path: 'changepassword', component: ChangePasswordComponent},
+      {path: 'postoffer', component: PostOfferComponent},
       {path: '', redirectTo: '/client/myoffers', pathMatch : 'full'}
     ]},
   {path: '', redirectTo: '/home/main', pathMatch : 'full'},
@@ -76,7 +78,8 @@ const appRoutes: Routes = [
     ChangePasswordComponent,
     OfferSingleComponent,
     CandidatSingleComponent,
-    HeaderCComponent
+    HeaderCComponent,
+    PostOfferComponent
   ],
   imports: [
     BrowserModule,
