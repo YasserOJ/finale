@@ -17,11 +17,18 @@ logpass:  string;
   }
   onLogin() {
     const clt = {
-      usermail : this.usermail,
-      logpass : this.logpass
+      userName : this.usermail,
+      email: this.usermail,
+      password : this.logpass
     };
     this.auth.authentificatec(clt).subscribe(data => {
-      console.log(data);
+      if (data.success === false ) {
+        this.flash.danger(data.msg, {timeout : 5000});
+      } else {
+        this.flash.success (data.msg, {timeout : 5000});
+        localStorage.setItem('user', JSON.stringify(data.client));
+        this.route.navigate(['/client/myoffers']);
+      }
     });
   }
 }

@@ -29,6 +29,7 @@ import { HeaderCComponent } from './client/header-c/header-c.component';
 
 import {ValidationServService} from './Services/validation-serv.service';
 import {AuthService} from './Services/auth.service';
+import {MygaurdGuard} from './guards/mygaurd.guard';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent, children: [
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
       {path: 'contact_us', component: ContactUsComponent },
       {path: '', redirectTo: '/home/main', pathMatch: 'full'}
     ]},
-  {path: 'client', component: ClientComponent, children: [
+  {path: 'client', component: ClientComponent, canActivateChild: [MygaurdGuard], children: [
       {path: 'myoffers', component: MyOffersComponent},
       {path: 'search', component: SearchComponent},
       {path: 'savedcv', component: SavedCvComponent},
@@ -84,7 +85,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FlashMessageModule
   ],
-  providers: [ValidationServService, AuthService],
+  providers: [ValidationServService, AuthService, MygaurdGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

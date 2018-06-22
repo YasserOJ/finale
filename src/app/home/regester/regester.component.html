@@ -6,7 +6,6 @@
       <span>Candidate</span>
       <span>Employer</span>
     </div>
-    <flash-message></flash-message>
     <form (submit)="Register()">
       <div class="cfield">
         <input type="text" placeholder="Company name" [(ngModel)]="name" name="name"  />
@@ -33,9 +32,10 @@
         <i class="la la-building"></i>
       </div>
       <div class="cfield">
-        <input type="text" placeholder="Phone Number(ex:95304452)" [(ngModel)]="phone" name="phone" />
+        <input type="text" placeholder="Phone Number(ex:0021695304452)" [(ngModel)]="phone" name="phone" />
         <i class="la la-phone"></i>
       </div>
+      <flash-message></flash-message>
       <button type="submit">Signup</button>
     </form>
       </div>
